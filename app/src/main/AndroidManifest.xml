@@ -9,24 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".YourActivity">
-            <intent-filter>
-                <action android:name="cn.johnyu.main"></action>
-                <category android:name="android.intent.category.DEFAULT"></category>
-            </intent-filter>
-        </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".MyActivity" >
-
-        </activity>
-        <activity android:name=".ListViewActivity">
+        <activity android:name=".RecyclerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".YourActivity">
+            <intent-filter>
+                <action android:name="cn.johnyu.main" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MyActivity"></activity>
+        <activity android:name=".ListViewActivity">
 
         </activity>
     </application>

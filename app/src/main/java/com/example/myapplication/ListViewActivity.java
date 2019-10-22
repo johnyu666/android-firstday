@@ -23,7 +23,7 @@ public class ListViewActivity extends AppCompatActivity {
         lv=findViewById(R.id.lv);
 
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             User u=new User();
             u.setUname("john"+i);
             u.setAge(i);

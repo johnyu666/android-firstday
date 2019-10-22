@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,12 +37,21 @@ public class UserAdapter extends ArrayAdapter<User> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        convertView=LayoutInflater.from(this.getContext()).inflate(this.rs,parent,false);
-       TextView nameTv=convertView.findViewById(R.id.nameTv);
-        TextView ageTv=convertView.findViewById(R.id.ageTv);
-       User user= getItem(position);
-        nameTv.setText(user.getUname());
-        ageTv.setText(user.getAge()+"");
+
+
+        if(convertView==null) {
+            Log.i("中", position + ".....");
+            convertView = LayoutInflater.from(this.getContext()).inflate(this.rs, parent, false);
+            TextView nameTv=convertView.findViewById(R.id.nameTv);
+            TextView ageTv=convertView.findViewById(R.id.ageTv);
+            convertView.setTag(R.id.nameTv,nameTv);
+            convertView.setTag(R.id.ageTv,ageTv);
+        }
+
+        User user= getItem(position);
+        ((TextView)convertView.getTag(R.id.nameTv)).setText(user.getUname());
+        ((TextView)convertView.getTag(R.id.ageTv)).setText(user.getAge()+"");
+
         return convertView;
     }
 }

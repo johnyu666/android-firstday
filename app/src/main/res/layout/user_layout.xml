@@ -16,4 +16,12 @@
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"></TextView>
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:onClick="delete"
+        android:text="删除"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"></Button>
 </LinearLayout>
